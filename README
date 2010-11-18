@@ -1,4 +1,4 @@
-This is a random-number library for Lua 5.0. It is based on the Mersenne
+This is a random-number library for Lua 5.1. It is based on the Mersenne
 Twister random number generator available at
 	http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/emt19937ar.html
 
@@ -18,8 +18,8 @@ Please send comments, suggestions, and bug reports to lhf@tecgraf.puc-rio.br .
 -------------------------------------------------------------------------------
 
 random library:
- clone(c)                tostring(c)             valuex(c) 
- new([seed])             value(c)                version 
- seed(c,[seed])          valuei(c,a,[b]) 
+ __call(c) 		 new([seed]) 		 version 
+ __tostring(c) 		 seed(c,[seed]) 
+ clone(c) 		 value(c,[a,b]) 
 
 -------------------------------------------------------------------------------
