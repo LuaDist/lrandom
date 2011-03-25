@@ -2,7 +2,7 @@
 * random.c
 * Mersenne Twister random number generator
 * Luiz Henrique de Figueiredo <lhf@tecgraf.puc-rio.br>
-* 18 Nov 2010 19:10:52
+* 23 Sep 2008 22:57:32
 * slightly modified from mt19937ar.c available at
 * http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/MT2002/emt19937ar.html
 */
@@ -119,24 +119,10 @@ static unsigned long genrand_int32(MT *o)
     return y;
 }
 
-/* These real versions are due to Isaku Wada, 2002/01/09 added */
-
-#ifdef GENRAND32
-/* generates a random number on [0,1)-real-interval */
-static double genrand_real2(MT *o)
-{
-    return genrand_int32(o)*(1.0/4294967296.0); 
-    /* divided by 2^32 */
-}
-#define genrand	genrand_real2
-#else
 /* generates a random number on [0,1) with 53-bit resolution*/
 static double genrand_res53(MT *o) 
 { 
     unsigned long a=genrand_int32(o)>>5, b=genrand_int32(o)>>6; 
     return(a*67108864.0+b)*(1.0/9007199254740992.0); 
 } 
-#define genrand	genrand_res53
-#endif
-
-#define AUTHOR "Mersenne Twister"
+/* These real versions are due to Isaku Wada, 2002/01/09 added */

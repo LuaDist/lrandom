@@ -1,0 +1,14 @@
+--- This file is part of LuaDist project
+
+name = "lrandom"
+version = "5.1"
+
+desc = "A library for generating random numbers based on the Mersenne Twister, a pseudorandom number generating algorithm."
+author = "Luiz Henrique de Figueiredo"
+url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/#lrandom"
+license = "Public domain"
+maintainer = "Peter Drahoš"
+
+depends = {
+	"lua ~> 5.1"
+}
