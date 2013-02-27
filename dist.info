@@ -1,0 +1,28 @@
+type = "x86_64"
+arch = "Ubuntu"
+author = "Luiz Henrique de Figueiredo"
+depends = {
+[[lua ~> 5.1]],
+}
+
+desc = "A library for generating random numbers based on the Mersenne Twister, a pseudorandom number generating algorithm."
+version = "5.1"
+maintainer = "Peter Drahoš"
+files = {
+Runtime = {
+[[lib/lua/random.so]],
+}
+,
+Data = {
+[[share/lrandom/README]],
+}
+,
+Test = {
+[[share/lrandom/test/test.lua]],
+}
+,
+}
+
+url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/#lrandom"
+name = "lrandom"
+license = "Public domain"
